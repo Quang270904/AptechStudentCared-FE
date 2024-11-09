@@ -1,0 +1,33 @@
+/* Sidebar Styles */
+.sidebar {
+  transition: width 0.3s ease;
+  width: 12rem; /* Default expanded width */
+  background-color: #f0f0f0; /* Adjust based on your design */
+  height: 100vh; /* Ensure full height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.sidebar-collapsed {
+  width: 3rem; /* Width when collapsed */
+}
+
+.sidebar-expanded {
+  width: 12rem; /* Width when expanded */
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 12rem; /* Default margin for expanded sidebar */
+  transition: margin-left 0.3s ease;
+  padding: 1rem;
+  flex: 1; /* Fill remaining space */
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-collapsed ~ .main-content {
+  margin-left: 3rem; /* Adjust margin when sidebar is collapsed */
+}
